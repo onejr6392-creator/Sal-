@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#08111f">
+<title>SAL IP CHECKER</title>
+<style>
+:root{color-scheme:dark;--bg:#08111f;--panel:#101c2d;--panel2:#15243a;--line:#273952;--text:#edf5ff;--muted:#9db0c9;--blue:#22b8f0;--blue2:#087db8;--green:#37d39a;--red:#ff7777}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#102849 0%,var(--bg) 48%);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;min-height:100vh}.wrap{max-width:920px;margin:auto;padding:28px 16px 48px}.top{display:flex;align-items:center;gap:13px;margin-bottom:26px}.logo{width:48px;height:48px;border-radius:15px;background:linear-gradient(135deg,#39d2ff,#0876c7);display:grid;place-items:center;box-shadow:0 8px 30px #008ed544}.logo svg{width:27px;height:27px}.brand{font-weight:850;letter-spacing:.3px;font-size:20px}.sub{font-size:11px;letter-spacing:1.7px;color:var(--muted);margin-top:4px}.pill{margin-left:auto;border:1px solid #245b58;color:#72e6c1;background:#10332f;padding:7px 10px;border-radius:99px;font-size:11px;font-weight:700}.hero{margin-bottom:20px}.hero h1{font-size:clamp(27px,6vw,42px);line-height:1.1;margin:0 0 10px;letter-spacing:-1.2px}.hero h1 span{color:var(--blue)}.hero p{color:var(--muted);line-height:1.6;margin:0;max-width:620px}.search,.panel{background:linear-gradient(150deg,#122138,#0d1828);border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:0 18px 60px #0002}.label{display:block;font-size:12px;font-weight:750;color:#c7d7eb;margin:0 0 9px}.inputrow{display:flex;gap:10px}.inputrow input{min-width:0;flex:1;background:#081321;border:1px solid #30445f;color:var(--text);padding:15px 14px;border-radius:12px;font-size:16px;outline:none}.inputrow input:focus{border-color:var(--blue);box-shadow:0 0 0 3px #22b8f022}.btn{border:0;border-radius:12px;background:linear-gradient(135deg,#27c4f4,#087fbe);color:white;font-size:14px;font-weight:800;padding:0 19px;cursor:pointer;min-height:49px}.btn:disabled{opacity:.55;cursor:wait}.hint{font-size:12px;color:var(--muted);margin:10px 0 0}.status{display:none;margin-top:12px;padding:11px 13px;border-radius:10px;font-size:13px;line-height:1.5}.status.show{display:block}.status.error{background:#401d28;color:#ffc0c0;border:1px solid #703342}.status.info{background:#112d42;color:#bdeeff;border:1px solid #23516b}.result{display:none;margin-top:18px}.result.show{display:block}.resulthead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}.resulthead h2{margin:0;font-size:18px}.ipbig{font-size:clamp(22px,5vw,32px);font-weight:850;letter-spacing:-.7px;overflow-wrap:anywhere}.tag{font-size:11px;color:#7ce5c3;background:#11372f;border:1px solid #255a4e;border-radius:99px;padding:6px 9px;white-space:nowrap}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.item{padding:15px;background:var(--panel2);border:1px solid #263a55;border-radius:13px;min-width:0}.item .k{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}.item .v{font-size:15px;font-weight:750;overflow-wrap:anywhere;line-height:1.45}.item .v.small{font-size:13px}.actions{display:flex;gap:10px;margin-top:14px}.secondary{background:#1b2d45;border:1px solid #344a66;color:#e4efff;padding:11px 14px;border-radius:10px;font-weight:700;cursor:pointer}.foot{text-align:center;color:#7187a3;font-size:11px;line-height:1.6;margin-top:22px}.foot a{color:#8bcfff}.hidden{display:none!important}@media(max-width:560px){.wrap{padding:20px 12px 34px}.pill{display:none}.search,.panel{padding:14px;border-radius:16px}.inputrow{flex-direction:column}.btn{width:100%}.grid{gap:8px}.item{padding:12px}.item .v{font-size:14px}.resulthead{align-items:flex-start}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="top">
+    <div class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17M12 3c2.4 2.5 3.4 5.5 3.4 9s-1 6.5-3.4 9c-2.4-2.5-3.4-5.5-3.4-9S9.6 5.5 12 3Z"/><path d="m16.5 3.8 1.8-1.3M19.8 6l2-1"/></svg></div>
+    <div><div class="brand">SAL IP CHECKER</div><div class="sub">IP ADDRESS INTELLIGENCE</div></div>
+    <div class="pill">● IP LOOKUP</div>
+  </header>
+  <section class="hero"><h1>Periksa IP.<br><span>Kenali jaringannya.</span></h1><p>Cari informasi IP publik, ASN, organisasi jaringan, negara, kota, dan kode pos jika tersedia.</p></section>
+  <section class="search">
+    <label class="label" for="ip">IP ADDRESS</label>
+    <div class="inputrow"><input id="ip" type="text" inputmode="url" autocomplete="off" spellcheck="false" placeholder="Contoh: 8.8.8.8 atau kosongkan untuk IP kamu"><button class="btn" id="searchBtn">CEK IP ADDRESS</button></div>
+    <p class="hint">Bisa cek IPv4 maupun IPv6. Kosongkan kolom untuk memeriksa IP publik koneksi yang sedang kamu gunakan.</p>
+    <div class="status" id="status" role="status" aria-live="polite"></div>
+  </section>
+  <section class="result" id="result" aria-live="polite">
+    <div class="panel">
+      <div class="resulthead"><div><div class="label">HASIL PENCARIAN</div><div class="ipbig" id="outIp">—</div></div><span class="tag">LOOKUP RESULT</span></div>
+      <div class="grid" id="grid"></div>
+      <div class="actions"><button class="secondary" id="copyBtn">Salin hasil</button><button class="secondary" id="clearBtn">Hapus hasil</button></div>
+    </div>
+  </section>
+  <footer class="foot">SAL IP CHECKER · Data IP adalah perkiraan berbasis basis data publik, bukan pelacakan lokasi rumah secara tepat.<br>Lookup memakai layanan pihak ketiga <a href="https://ipwho.is/" target="_blank" rel="noopener noreferrer">ipwho.is</a>. Jangan gunakan hasil IP untuk mengidentifikasi atau mengganggu orang lain.</footer>
+</main>
+<script>
+const $=id=>document.getElementById(id);const input=$('ip'),btn=$('searchBtn'),status=$('status'),result=$('result');let lastText='';
+function showStatus(msg,type='info'){status.textContent=msg;status.className='status show '+type}
+function hideStatus(){status.className='status'}
+function validIp(value){if(!value)return true;if(value.length>45||/\s/.test(value))return false;return /^[0-9a-fA-F:.]+$/.test(value)&& (value.includes('.')||value.includes(':'))}
+function field(label,value){const box=document.createElement('div');box.className='item';const k=document.createElement('div');k.className='k';k.textContent=label;const v=document.createElement('div');v.className='v';v.textContent=(value===undefined||value===null||value==='')?'Tidak tersedia':String(value);box.append(k,v);return box}
+async function lookup(){const ip=input.value.trim();if(!validIp(ip)){showStatus('Format IP tampaknya tidak valid. Masukkan IPv4 atau IPv6 yang benar.','error');return}btn.disabled=true;btn.textContent='MENCARI…';hideStatus();result.classList.remove('show');try{const url='https://ipwho.is/'+(ip?encodeURIComponent(ip):'');const response=await fetch(url,{headers:{'Accept':'application/json'}});if(!response.ok)throw new Error('Layanan lookup sedang tidak bisa dihubungi. Coba lagi nanti.');const data=await response.json();if(data.success===false)throw new Error(data.message||'IP tidak ditemukan atau tidak dapat diperiksa.');const conn=data.connection||{};const loc=[data.city,data.region,data.country].filter(Boolean).join(', ');const rows=[['Negara',data.country],['Kode negara',data.country_code],['Kota / wilayah',loc],['ZIP / postal code',data.postal],['ASN',conn.asn?'AS'+conn.asn:''],['Organisasi jaringan',conn.org],['ISP',conn.isp],['Domain',conn.domain],['Tipe IP',data.type],['Zona waktu',data.timezone&&data.timezone.id],['Koordinat perkiraan',data.latitude!=null&&data.longitude!=null?data.latitude+', '+data.longitude:'']];$('outIp').textContent=data.ip||ip||'IP publik';const grid=$('grid');grid.replaceChildren();for(const [k,v] of rows)grid.appendChild(field(k,v));lastText='SAL IP CHECKER\nIP: '+(data.ip||ip||'IP publik')+'\n'+rows.map(([k,v])=>k+': '+(v||'Tidak tersedia')).join('\n');result.classList.add('show');showStatus('Pencarian selesai. Informasi lokasi dan kode pos dapat tidak tersedia atau kurang tepat.','info')}catch(e){showStatus((e.message||'Gagal mengambil data.')+' Pastikan internet aktif dan coba lagi.','error')}finally{btn.disabled=false;btn.textContent='CEK IP ADDRESS'}}
+btn.addEventListener('click',lookup);input.addEventListener('keydown',e=>{if(e.key==='Enter')lookup()});$('copyBtn').addEventListener('click',async()=>{if(!lastText)return;try{await navigator.clipboard.writeText(lastText);showStatus('Hasil berhasil disalin.','info')}catch{showStatus('Fitur salin tidak tersedia di browser ini.','error')}});$('clearBtn').addEventListener('click',()=>{result.classList.remove('show');input.value='';lastText='';hideStatus();input.focus()});
+</script>
+</body>
+</html>
